@@ -31,7 +31,7 @@
     "auto": "auto",
     "changelog": "npm run auto changelog",
     "version": "rm -rf dist && npm run build",
-    "postversion": "git push --follow-tags && npm run auto release"
+    "release": "git push --follow-tags && npm run auto release"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.34",
