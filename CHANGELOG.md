@@ -1,3 +1,24 @@
+# v0.0.2 (Fri Apr 05 2024)
+
+#### 🐛 Bug Fix
+
+- Add auto publish [#2](https://github.com/selsa-inube/inubekit-header/pull/2) ([@cmarin001](https://github.com/cmarin001))
+
+#### ⚠️ Pushed to `main`
+
+- Initial commit ([@Andresbl123](https://github.com/Andresbl123))
+
+#### 🔩 Dependency Updates
+
+- Update all inubekit/header to storybook v8 [#1](https://github.com/selsa-inube/inubekit-header/pull/1) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 2
+
+- Andres ([@Andresbl123](https://github.com/Andresbl123))
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v0.0.1 (Wed Jan 17 2024)
 
 #### ⚠️ Pushed to `main`
