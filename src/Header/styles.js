@@ -8,10 +8,10 @@ const StyledHeader = styled.header`
   box-shadow:
     0px 1px 3px 1px
       ${({ theme }) =>
-        theme?.header?.background?.color || inube.header.background.color},
+        theme?.palette?.neutral?.N40 || inube.palette.neutral.N40},
     0px 1px 2px 0px
       ${({ theme }) =>
-        theme?.header?.background?.color || inube.header.background.color};
+        theme?.palette?.neutral?.N20 || inube.palette.neutral.N20};
 
   & > div > div > div {
     position: unset;
@@ -30,7 +30,7 @@ const StyledHeader = styled.header`
     padding: 8px 16px;
     border-left: 1px solid
       ${({ theme }) =>
-        theme?.header?.background?.color || inube.header.background.color};
+        theme?.palette?.neutral?.N40 || inube.palette.neutral.N40};
   }
 `;
 
