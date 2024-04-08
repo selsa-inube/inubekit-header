@@ -1,3 +1,15 @@
+# v1.0.0 (Mon Apr 08 2024)
+
+#### 💥 Breaking Change
+
+- Refactor components `<Header/>` to use new token structure [#3](https://github.com/selsa-inube/inubekit-header/pull/3) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v0.0.2 (Fri Apr 05 2024)
 
 #### 🐛 Bug Fix
