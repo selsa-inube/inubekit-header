@@ -1,3 +1,15 @@
+# v2.1.0 (Thu May 16 2024)
+
+#### 🚀 Enhancement
+
+- Extend `<Header />` Component to Include Conditional Rendering of `<User />` Component [#6](https://github.com/selsa-inube/inubekit-header/pull/6) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.0.0 (Thu May 16 2024)
 
 #### 💥 Breaking Change
