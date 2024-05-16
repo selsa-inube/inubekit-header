@@ -13,8 +13,8 @@ interface IHeader {
   portalId: string;
   navigation: IFNavigation;
   logoURL: JSX.Element;
-  userName: string;
-  client: string;
+  userName?: string;
+  client?: string;
   links?: IHeaderLink[];
   showLinks?: boolean;
   showUser?: boolean;
@@ -68,10 +68,10 @@ const Header = (props: IHeader) => {
                 </Text>
               </StyledLink>
             ))}
-          {showUser && (
+          {showUser && userName && (
             <User
               username={userName}
-              client={client}
+              client={client!}
               size={mobile ? "small" : "large"}
             />
           )}
