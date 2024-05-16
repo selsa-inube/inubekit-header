@@ -16,10 +16,21 @@ interface IHeader {
   userName: string;
   client: string;
   links?: IHeaderLink[];
+  showLinks?: boolean;
+  showUser?: boolean;
 }
 
 const Header = (props: IHeader) => {
-  const { portalId, navigation, logoURL, userName, client, links } = props;
+  const {
+    portalId,
+    navigation,
+    logoURL,
+    userName,
+    client,
+    links,
+    showLinks = false,
+    showUser = true,
+  } = props;
   const theme = useContext(ThemeContext);
   const linkAppearance =
     (theme?.header?.content?.appearance as ITextAppearance) ||
@@ -31,7 +42,12 @@ const Header = (props: IHeader) => {
   return (
     <StyledHeader>
       <Stack alignItems="center" justifyContent="space-between">
-        <Stack justifyContent="space-between" gap="23px">
+        <Stack
+          justifyContent="space-between"
+          gap="23px"
+          height={showUser ? "auto" : "53px"}
+          alignItems="center"
+        >
           {tablet && (
             <FullscreenNav
               portalId={portalId}
@@ -43,7 +59,7 @@ const Header = (props: IHeader) => {
           {logoURL}
         </Stack>
         <Stack justifyContent="space-between" gap="23px">
-          {tablet &&
+          {showLinks &&
             links &&
             links.map((link, index) => (
               <StyledLink key={index} to={link.path}>
@@ -52,11 +68,13 @@ const Header = (props: IHeader) => {
                 </Text>
               </StyledLink>
             ))}
-          <User
-            username={userName}
-            client={client}
-            size={mobile ? "small" : "large"}
-          />
+          {showUser && (
+            <User
+              username={userName}
+              client={client}
+              size={mobile ? "small" : "large"}
+            />
+          )}
         </Stack>
       </Stack>
     </StyledHeader>

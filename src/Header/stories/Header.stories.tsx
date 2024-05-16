@@ -107,6 +107,8 @@ Default.args = {
       icon: <MdAndroid />,
     },
   ],
+  showLinks: false,
+  showUser: true,
 };
 
 export default story;
