@@ -1,3 +1,15 @@
+# v2.0.0 (Thu May 16 2024)
+
+#### 💥 Breaking Change
+
+- Extend `<Header />` to control if `<User />` should be included or not [#5](https://github.com/selsa-inube/inubekit-header/pull/5) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.1.0 (Tue Apr 30 2024)
 
 #### 🚀 Enhancement
