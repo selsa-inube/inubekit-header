@@ -1,3 +1,15 @@
+# v2.1.1 (Thu May 16 2024)
+
+#### 🐛 Bug Fix
+
+- Update types in order to fix the exportation error [#7](https://github.com/selsa-inube/inubekit-header/pull/7) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.1.0 (Thu May 16 2024)
 
 #### 🚀 Enhancement
