@@ -37,6 +37,20 @@ const props = {
   portalId: {
     description: "id of the portal element",
   },
+  showLinks: {
+    description:
+      "Boolean flag to control the visibility of the links in the header",
+    table: {
+      defaultValue: { summary: false },
+    },
+  },
+  showUser: {
+    description:
+      "Boolean flag to control the visibility of the user component in the header",
+    table: {
+      defaultValue: { summary: true },
+    },
+  },
 };
 
 export { props, parameters };

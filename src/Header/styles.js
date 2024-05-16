@@ -26,6 +26,9 @@ const StyledHeader = styled.header`
   & > div > div:first-child {
     padding-left: 12px;
   }
+  & > div > div > img {
+    height: 33.57px;
+  }
   & > div > div > div:last-child {
     padding: 8px 16px;
     border-left: 1px solid
