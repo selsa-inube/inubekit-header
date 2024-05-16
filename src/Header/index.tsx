@@ -31,7 +31,7 @@ const Header = (props: IHeader) => {
     showLinks = false,
     showUser = true,
   } = props;
-  const theme = useContext(ThemeContext);
+  const theme: typeof inube = useContext(ThemeContext);
   const linkAppearance =
     (theme?.header?.content?.appearance as ITextAppearance) ||
     inube.header.content.appearance;
