@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import dst from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,10 +15,9 @@ export default defineConfig({
       external: [
         "react",
         "react-dom",
-        "react-router-dom",
-        "react-icons/md",
         "react/jsx-runtime",
         "styled-components",
+        "react-icons/md",
         "@inubekit/foundations",
         "@inubekit/user",
         "@inubekit/hooks",
@@ -33,5 +33,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react()],
+  plugins: [react(), dst({ rollupTypes: true })],
 });
