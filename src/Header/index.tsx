@@ -63,7 +63,12 @@ const Header = (props: IHeader) => {
             links &&
             links.map((link, index) => (
               <StyledLink key={index} to={link.path}>
-                <Text type="label" size="medium" appearance={linkAppearance}>
+                <Text
+                  type="label"
+                  size="medium"
+                  appearance={linkAppearance}
+                  weight="bold"
+                >
                   {link.label}
                 </Text>
               </StyledLink>
