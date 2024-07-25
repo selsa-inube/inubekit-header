@@ -1,3 +1,15 @@
+# v2.6.0 (Thu Jul 25 2024)
+
+#### 🚀 Enhancement
+
+- Adjustment in order to remove bug from styles [#13](https://github.com/selsa-inube/inubekit-header/pull/13) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.5.0 (Tue Jul 09 2024)
 
 #### 🚀 Enhancement
