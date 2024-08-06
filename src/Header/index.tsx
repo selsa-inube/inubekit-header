@@ -4,13 +4,13 @@ import { inube } from "@inubekit/foundations";
 import { User } from "@inubekit/user";
 import { useMediaQueries } from "@inubekit/hooks";
 import { Stack } from "@inubekit/stack";
- import { ITextAppearance, Text } from "@inubekit/text";
+import { ITextAppearance, Text } from "@inubekit/text";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
 // import { StyledHeader, StyledLink } from "./styles";
 import { StyledHeader, StyledHeaderLink } from "./styles";
 //import { ITextAppearance } from "@inubekit/text";
-import {  useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 interface IHeader {
   portalId: string;
@@ -23,26 +23,6 @@ interface IHeader {
   showUser?: boolean;
 }
 
-const Links = ({ links, linkAppearance }: { links: IHeaderLink[], linkAppearance: ITextAppearance }) => {
-  const location = useLocation();
-
-  return (
-    <>
-      {links.map((link, index) => (
-        <StyledHeaderLink key={index} to={link.path}>
-          <Text
-            type="label"
-            size="medium"
-            appearance={location.pathname === link.path?"dark": linkAppearance}
-            weight="bold"
-          >
-            {link.label}
-          </Text>
-        </StyledHeaderLink>
-      ))}
-    </>
-  );
-};
 
 const Header = (props: IHeader) => {
   const {
@@ -60,10 +40,12 @@ const Header = (props: IHeader) => {
   const linkAppearance =
     (theme?.header?.content?.appearance as ITextAppearance) ||
     inube.header.content.appearance;
-  console.log('linkAppearance: ',linkAppearance);
+  console.log("linkAppearance: ", linkAppearance);
   const [mobile, tablet] = Object.values(
     useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "])
   );
+  const location = useLocation();
+  console.log("Current location:", location);
 
   return (
     <StyledHeader>
@@ -85,8 +67,21 @@ const Header = (props: IHeader) => {
           {logoURL}
         </Stack>
         <Stack justifyContent="space-between" gap="23px">
-        {showLinks && links && (
-            <Links links={links} linkAppearance={linkAppearance as ITextAppearance} />
+          {showLinks && links && (
+            <>
+              {links.map((link, index) => (
+                <StyledHeaderLink key={index} to={link.path}>
+                  <Text
+                    type="label"
+                    size="medium"
+                    appearance={linkAppearance}
+                    weight="bold"
+                  >
+                    {link.label}
+                  </Text>
+                </StyledHeaderLink>
+              ))}
+            </>
           )}
           {showUser && userName && (
             <User
