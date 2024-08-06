@@ -31,7 +31,7 @@ const Header = (props: IHeader) => {
     showLinks = false,
     showUser = true,
   } = props;
-  const theme = useContext(ThemeContext);
+  const theme: typeof inube = useContext(ThemeContext);
   if (!theme) {
     console.error("ThemeContext is not provided.");
   }
