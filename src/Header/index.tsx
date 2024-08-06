@@ -4,10 +4,12 @@ import { inube } from "@inubekit/foundations";
 import { User } from "@inubekit/user";
 import { useMediaQueries } from "@inubekit/hooks";
 import { Stack } from "@inubekit/stack";
-import { ITextAppearance, Text } from "@inubekit/text";
+// import { ITextAppearance, Text } from "@inubekit/text";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
-import { StyledHeader, StyledLink } from "./styles";
+// import { StyledHeader, StyledLink } from "./styles";
+import { StyledHeader } from "./styles";
+import { ITextAppearance } from "@inubekit/text";
 
 interface IHeader {
   portalId: string;
@@ -63,17 +65,20 @@ const Header = (props: IHeader) => {
         <Stack justifyContent="space-between" gap="23px">
           {showLinks &&
             links &&
-            links.map((link) => (
-              <StyledLink  to={"/test"}>
-                <Text
-                  type="label"
-                  size="medium"
-                  appearance={linkAppearance}
-                  weight="bold"
-                >
-                  {link.label}
-                </Text>
-              </StyledLink>
+            links.map((link, index) => (
+              // <StyledLink key={index} to={link.path}>
+              //   <Text
+              //     type="label"
+              //     size="medium"
+              //     appearance={linkAppearance as ITextAppearance}
+              //     weight="bold"
+              //   >
+              //     {link.label}
+              //   </Text>
+              // </StyledLink>
+              <>
+              {console.log('link, index: ',link, index)}
+              </>
             ))}
           {showUser && userName && (
             <User
