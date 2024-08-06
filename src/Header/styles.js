@@ -37,7 +37,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledHeaderLink = styled(Link)`
   display: flex;
   text-decoration: none;
   padding: 16px;
