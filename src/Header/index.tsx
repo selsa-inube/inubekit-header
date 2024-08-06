@@ -4,7 +4,7 @@ import { inube } from "@inubekit/foundations";
 import { User } from "@inubekit/user";
 import { useMediaQueries } from "@inubekit/hooks";
 import { Stack } from "@inubekit/stack";
-import { ITextAppearance, Text } from "@inubekit/text";
+import { Text } from "@inubekit/text";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
 import { StyledHeader, StyledLink } from "./styles";
@@ -66,7 +66,7 @@ const Header = (props: IHeader) => {
                 <Text
                   type="label"
                   size="medium"
-                  appearance={linkAppearance as ITextAppearance}
+                  appearance="gray"
                   weight="bold"
                 >
                   {link.label}
