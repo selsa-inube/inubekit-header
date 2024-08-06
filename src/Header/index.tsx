@@ -64,7 +64,7 @@ const Header = (props: IHeader) => {
           {showLinks &&
             links &&
             links.map((link, index) => (
-              <StyledLink key={index} to={link.path}>
+              <StyledLink  to={"/test"}>
                 <Text
                   type="label"
                   size="medium"
