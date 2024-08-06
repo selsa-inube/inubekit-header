@@ -4,12 +4,13 @@ import { inube } from "@inubekit/foundations";
 import { User } from "@inubekit/user";
 import { useMediaQueries } from "@inubekit/hooks";
 import { Stack } from "@inubekit/stack";
-// import { ITextAppearance, Text } from "@inubekit/text";
+ import { ITextAppearance, Text } from "@inubekit/text";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
 // import { StyledHeader, StyledLink } from "./styles";
 import { StyledHeader } from "./styles";
-import { ITextAppearance } from "@inubekit/text";
+//import { ITextAppearance } from "@inubekit/text";
+import { Link } from "react-router-dom";
 
 interface IHeader {
   portalId: string;
@@ -21,6 +22,12 @@ interface IHeader {
   showLinks?: boolean;
   showUser?: boolean;
 }
+
+const SimpleLink = ({ to, children } : { to: string, children: any} ) => (
+  <Link to={to} style={{ display: 'flex', textDecoration: 'none', padding: '16px' }}>
+    {children}
+  </Link>
+);
 
 const Header = (props: IHeader) => {
   const {
@@ -66,19 +73,16 @@ const Header = (props: IHeader) => {
           {showLinks &&
             links &&
             links.map((link, index) => (
-              // <StyledLink key={index} to={link.path}>
-              //   <Text
-              //     type="label"
-              //     size="medium"
-              //     appearance={linkAppearance as ITextAppearance}
-              //     weight="bold"
-              //   >
-              //     {link.label}
-              //   </Text>
-              // </StyledLink>
-              <>
-              {console.log('link, index: ',link, index)}
-              </>
+              <SimpleLink key={index} to={link.path}>
+                <Text
+                  type="label"
+                  size="medium"
+                  appearance={linkAppearance as ITextAppearance}
+                  weight="bold"
+                >
+                  {link.label}
+                </Text>
+              </SimpleLink>
             ))}
           {showUser && userName && (
             <User
