@@ -33,9 +33,7 @@ const Header = (props: IHeader) => {
     showUser = true,
   } = props;
   
-  const theme: any = useContext(ThemeContext);
-  console.log("ThemeContext:", theme);
-  console.log("Props received:", props);
+  const theme: any = useContext(ThemeContext) || inube;
   
   if (!theme) {
     console.error("ThemeContext is not provided.");
@@ -44,6 +42,7 @@ const Header = (props: IHeader) => {
   const linkAppearance =
     (theme?.header?.content?.appearance as ITextAppearance) ||
     inube.header.content.appearance;
+
   const [mobile, tablet] = Object.values(
     useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "]),
   );
