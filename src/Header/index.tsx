@@ -34,9 +34,10 @@ const Header = (props: IHeader) => {
   
  const theme = useContext<typeof inube>(ThemeContext);
 
-  const linkAppearance =
-    (theme?.header?.content?.appearance as ITextAppearance) ||
+  const linkAppearance = theme ? 
+    theme?.header?.content?.appearance :
     inube.header.content.appearance;
+
 
   const [mobile, tablet] = Object.values(
     useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "]),
@@ -69,7 +70,7 @@ const Header = (props: IHeader) => {
                 <Text
                   type="label"
                   size="medium"
-                  appearance={linkAppearance}
+                  appearance={linkAppearance as ITextAppearance}
                   weight="bold"
                 >
                   {link.label}
