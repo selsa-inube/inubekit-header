@@ -1,4 +1,5 @@
-import { useContext } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import  { useContext } from "react";
 import { ThemeContext } from "styled-components";
 import { inube } from "@inubekit/foundations";
 import { User } from "@inubekit/user";
@@ -31,10 +32,15 @@ const Header = (props: IHeader) => {
     showLinks = false,
     showUser = true,
   } = props;
-  const theme: typeof inube = useContext(ThemeContext);
+  
+  const theme: any = useContext(ThemeContext);
+  console.log("ThemeContext:", theme);
+  console.log("Props received:", props);
+  
   if (!theme) {
     console.error("ThemeContext is not provided.");
   }
+  
   const linkAppearance =
     (theme?.header?.content?.appearance as ITextAppearance) ||
     inube.header.content.appearance;
