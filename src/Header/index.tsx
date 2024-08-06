@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "styled-components";
+import { ThemeContext, DefaultTheme } from "styled-components";
 import { inube } from "@inubekit/foundations";
 import { User } from "@inubekit/user";
 import { useMediaQueries } from "@inubekit/hooks";
@@ -31,16 +31,12 @@ const Header = (props: IHeader) => {
     showLinks = false,
     showUser = true,
   } = props;
-  
- const theme = useContext<typeof inube>(ThemeContext);
 
-  const linkAppearance = theme ? 
-    theme?.header?.content?.appearance :
-    inube.header.content.appearance;
-
+  const theme = useContext<typeof DefaultTheme>(ThemeContext) || inube;
+  const linkAppearance = theme.header.content.appearance;
 
   const [mobile, tablet] = Object.values(
-    useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "]),
+    useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "])
   );
 
   return (
