@@ -43,4 +43,4 @@ const StyledHeaderLink = styled(Link)`
   padding: 16px;
 `;
 
-export { StyledHeader, StyledLink };
+export { StyledHeader, StyledHeaderLink };
