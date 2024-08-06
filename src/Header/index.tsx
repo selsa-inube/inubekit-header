@@ -1,5 +1,4 @@
-// Header.js (or .tsx)
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "styled-components";
 import { inube } from "@inubekit/foundations";
 import { User } from "@inubekit/user";
