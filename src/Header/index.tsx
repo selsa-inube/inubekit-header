@@ -8,9 +8,9 @@ import { Stack } from "@inubekit/stack";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
 // import { StyledHeader, StyledLink } from "./styles";
-import { StyledHeader } from "./styles";
+import { StyledHeader, StyledHeaderLink } from "./styles";
 //import { ITextAppearance } from "@inubekit/text";
-import { Link } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 
 interface IHeader {
   portalId: string;
@@ -23,11 +23,26 @@ interface IHeader {
   showUser?: boolean;
 }
 
-const SimpleLink = ({ to, children } : { to: string, children: any} ) => (
-  <Link to={to} style={{ display: 'flex', textDecoration: 'none', padding: '16px' }}>
-    {children}
-  </Link>
-);
+const Links = ({ links, linkAppearance }: { links: IHeaderLink[], linkAppearance: ITextAppearance }) => {
+  const location = useLocation();
+
+  return (
+    <>
+      {links.map((link, index) => (
+        <StyledHeaderLink key={index} to={link.path}>
+          <Text
+            type="label"
+            size="medium"
+            appearance={location.pathname === link.path?"dark": linkAppearance}
+            weight="bold"
+          >
+            {link.label}
+          </Text>
+        </StyledHeaderLink>
+      ))}
+    </>
+  );
+};
 
 const Header = (props: IHeader) => {
   const {
@@ -70,20 +85,9 @@ const Header = (props: IHeader) => {
           {logoURL}
         </Stack>
         <Stack justifyContent="space-between" gap="23px">
-          {showLinks &&
-            links &&
-            links.map((link, index) => (
-              <SimpleLink key={index} to={link.path}>
-                <Text
-                  type="label"
-                  size="medium"
-                  appearance={linkAppearance as ITextAppearance}
-                  weight="bold"
-                >
-                  {link.label}
-                </Text>
-              </SimpleLink>
-            ))}
+        {showLinks && links && (
+            <Links links={links} linkAppearance={linkAppearance as ITextAppearance} />
+          )}
           {showUser && userName && (
             <User
               username={userName}
