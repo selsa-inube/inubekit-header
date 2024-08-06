@@ -7,7 +7,7 @@ import { Stack } from "@inubekit/stack";
 import { Text } from "@inubekit/text";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
-import { StyledHeader, StyledLink } from "./styles";
+import { StyledHeader } from "./styles";
 
 interface IHeader {
   portalId: string;
@@ -61,17 +61,17 @@ const Header = (props: IHeader) => {
         <Stack justifyContent="space-between" gap="23px">
           {showLinks &&
             links &&
-            links.map((link, index) => (
-              <StyledLink key={index} to={link.path}>
+             links.map((link) => (
+
                 <Text
                   type="label"
                   size="medium"
-                  appearance="gray"
+                  appearance={linkAppearance}
                   weight="bold"
                 >
                   {link.label}
                 </Text>
-              </StyledLink>
+
             ))}
           {showUser && userName && (
             <User
