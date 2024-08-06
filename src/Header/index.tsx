@@ -63,7 +63,7 @@ const Header = (props: IHeader) => {
         <Stack justifyContent="space-between" gap="23px">
           {showLinks &&
             links &&
-            links.map((link, index) => (
+            links.map((link) => (
               <StyledLink  to={"/test"}>
                 <Text
                   type="label"
