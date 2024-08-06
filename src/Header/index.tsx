@@ -34,7 +34,7 @@ const Header = (props: IHeader) => {
 
   const theme = useContext<typeof DefaultTheme>(ThemeContext) || inube;
   const linkAppearance = theme.header.content.appearance;
-
+  console.log('linkAppearance: ',linkAppearance);
   const [mobile, tablet] = Object.values(
     useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "])
   );
