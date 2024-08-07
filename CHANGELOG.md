@@ -1,3 +1,16 @@
+# v2.12.18 (Wed Aug 07 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update styles.js ([@cmarin001](https://github.com/cmarin001))
+- Update index.tsx ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.12.17 (Wed Aug 07 2024)
 
 #### ⚠️ Pushed to `main`
