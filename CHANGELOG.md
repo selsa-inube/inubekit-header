@@ -1,3 +1,15 @@
+# v2.12.17 (Wed Aug 07 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update vite.config.ts ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.12.16 (Wed Aug 07 2024)
 
 #### ⚠️ Pushed to `main`
