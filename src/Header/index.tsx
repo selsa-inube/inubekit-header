@@ -7,7 +7,7 @@ import { Stack } from "@inubekit/stack";
 import { ITextAppearance, Text } from "@inubekit/text";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
-import { StyledHeader, StyledHeaderLink } from "./styles";
+import { StyledHeader, StyledLink } from "./styles";
 
 interface IHeader {
   portalId: string;
@@ -20,7 +20,6 @@ interface IHeader {
   showUser?: boolean;
 }
 
-
 const Header = (props: IHeader) => {
   const {
     portalId,
@@ -32,14 +31,12 @@ const Header = (props: IHeader) => {
     showLinks = false,
     showUser = true,
   } = props;
-
   const theme: typeof inube = useContext(ThemeContext);
   const linkAppearance =
     (theme?.header?.content?.appearance as ITextAppearance) ||
     inube.header.content.appearance;
-  console.log("linkAppearance: ", linkAppearance);
   const [mobile, tablet] = Object.values(
-    useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "])
+    useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "]),
   );
 
   return (
@@ -62,22 +59,20 @@ const Header = (props: IHeader) => {
           {logoURL}
         </Stack>
         <Stack justifyContent="space-between" gap="23px">
-          {showLinks && links && (
-            <>
-              {links.map((link, index) => (
-                <StyledHeaderLink key={index} to={link.path}>
-                  <Text
-                    type="label"
-                    size="medium"
-                    appearance={linkAppearance}
-                    weight="bold"
-                  >
-                    {link.label}
-                  </Text>
-                </StyledHeaderLink>
-              ))}
-            </>
-          )}
+          {showLinks &&
+            links &&
+            links.map((link, index) => (
+              <StyledLink key={index} to={link.path}>
+                <Text
+                  type="label"
+                  size="medium"
+                  appearance={linkAppearance}
+                  weight="bold"
+                >
+                  {link.label}
+                </Text>
+              </StyledLink>
+            ))}
           {showUser && userName && (
             <User
               username={userName}
