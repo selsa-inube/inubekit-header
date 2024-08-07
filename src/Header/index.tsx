@@ -7,10 +7,7 @@ import { Stack } from "@inubekit/stack";
 import { ITextAppearance, Text } from "@inubekit/text";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
-// import { StyledHeader, StyledLink } from "./styles";
 import { StyledHeader, StyledHeaderLink } from "./styles";
-//import { ITextAppearance } from "@inubekit/text";
-import { useLocation } from "react-router-dom";
 
 interface IHeader {
   portalId: string;
@@ -44,8 +41,6 @@ const Header = (props: IHeader) => {
   const [mobile, tablet] = Object.values(
     useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "])
   );
-  const location = useLocation();
-  console.log("Current location:", location);
 
   return (
     <StyledHeader>
