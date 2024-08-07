@@ -37,10 +37,10 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledHeaderLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: flex;
   text-decoration: none;
   padding: 16px;
 `;
 
-export { StyledHeader, StyledHeaderLink };
+export { StyledHeader, StyledLink };
