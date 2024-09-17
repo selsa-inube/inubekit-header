@@ -11,7 +11,7 @@ import { StyledHeader, StyledLink } from "./styles";
 
 interface IHeader {
   portalId: string;
-  navigation: IFNavigation;
+  navigation?: IFNavigation;
   logoURL: JSX.Element;
   userName?: string;
   client?: string;
@@ -48,7 +48,7 @@ const Header = (props: IHeader) => {
           height={showUser ? "auto" : "53px"}
           alignItems="center"
         >
-          {tablet && (
+          {tablet && navigation && (
             <FullscreenNav
               portalId={portalId}
               navigation={navigation}
