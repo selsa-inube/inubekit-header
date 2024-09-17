@@ -1,3 +1,15 @@
+# v2.36.0 (Tue Sep 17 2024)
+
+#### 🚀 Enhancement
+
+- feat(nav): navigation prop optional and fullscreen-nav depend on prop [#49](https://github.com/selsa-inube/inubekit-header/pull/49) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v2.35.0 (Wed Sep 04 2024)
 
 #### 🚀 Enhancement
