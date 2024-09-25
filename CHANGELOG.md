@@ -1,3 +1,15 @@
+# v2.39.0 (Wed Sep 25 2024)
+
+#### 🚀 Enhancement
+
+- Move header tokens from foundations to component [#52](https://github.com/selsa-inube/inubekit-header/pull/52) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.38.0 (Wed Sep 25 2024)
 
 #### 🚀 Enhancement
