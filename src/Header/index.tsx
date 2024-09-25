@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
-import { inube } from "@inubekit/foundations";
 import { User } from "@inubekit/user";
 import { useMediaQueries } from "@inubekit/hooks";
 import { Stack } from "@inubekit/stack";
@@ -8,6 +7,7 @@ import { ITextAppearance, Text } from "@inubekit/text";
 import { FullscreenNav, IFNavigation } from "@inubekit/fullscreennav";
 import { IHeaderLink } from "./props";
 import { StyledHeader, StyledLink } from "./styles";
+import { tokens } from "./Tokens/tokens";
 
 interface IHeader {
   portalId: string;
@@ -31,10 +31,10 @@ const Header = (props: IHeader) => {
     showLinks = false,
     showUser = true,
   } = props;
-  const theme: typeof inube = useContext(ThemeContext);
+  const theme = useContext(ThemeContext) as { header: typeof tokens };
   const linkAppearance =
     (theme?.header?.content?.appearance as ITextAppearance) ||
-    inube.header.content.appearance;
+    tokens.content.appearance;
   const [mobile, tablet] = Object.values(
     useMediaQueries(["(max-width: 420px)", "(max-width: 944px) "]),
   );

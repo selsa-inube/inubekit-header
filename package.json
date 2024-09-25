@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@inubekit/foundations": "^5.11.2",
-    "@inubekit/fullscreennav": "^2.4.0",
+    "@inubekit/fullscreennav": "^2.36.0",
     "@inubekit/hooks": "^1.2.0",
     "@inubekit/icon": "^2.16.0",
     "@inubekit/stack": "^3.8.0",
