@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { inube } from "@inubekit/foundations";
 import { Link } from "react-router-dom";
+import { tokens } from "./Tokens/tokens";
 
 const StyledHeader = styled.header`
   background-color: ${({ theme }) =>
-    theme?.header?.background?.color || inube.header.background.color};
+    theme?.header?.background?.color || tokens.background.color};
   box-shadow:
     0px 1px 3px 1px
       ${({ theme }) =>
