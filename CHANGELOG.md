@@ -1,3 +1,15 @@
+# v2.43.1 (Thu Oct 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: update use of tokens inside the styles ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.43.0 (Tue Oct 01 2024)
 
 #### 🚀 Enhancement
