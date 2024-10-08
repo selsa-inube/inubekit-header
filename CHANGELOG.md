@@ -1,3 +1,15 @@
+# v2.44.0 (Tue Oct 08 2024)
+
+#### 🚀 Enhancement
+
+- Extend `<Header />` to integrate `<User />` with custom menu [#57](https://github.com/selsa-inube/inubekit-header/pull/57) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.43.1 (Thu Oct 03 2024)
 
 #### ⚠️ Pushed to `main`
