@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
-import { User } from "@inubekit/user";
+import { IMenuSection, User } from "@inubekit/user";
 import { useMediaQueries } from "@inubekit/hooks";
 import { Stack } from "@inubekit/stack";
 import { ITextAppearance, Text } from "@inubekit/text";
@@ -18,6 +18,7 @@ interface IHeader {
   links?: IHeaderLink[];
   showLinks?: boolean;
   showUser?: boolean;
+  userMenu?: IMenuSection[];
 }
 
 const Header = (props: IHeader) => {
@@ -30,6 +31,7 @@ const Header = (props: IHeader) => {
     links,
     showLinks = false,
     showUser = true,
+    userMenu = [],
   } = props;
   const theme = useContext(ThemeContext) as { header: typeof tokens };
   const linkAppearance =
@@ -78,6 +80,7 @@ const Header = (props: IHeader) => {
               username={userName}
               client={client!}
               size={mobile ? "small" : "large"}
+              menu={userMenu}
             />
           )}
         </Stack>

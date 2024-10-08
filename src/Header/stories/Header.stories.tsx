@@ -9,6 +9,9 @@ import {
   MdAccountBalance,
   MdAccountBalanceWallet,
   MdAndroid,
+  MdSettings,
+  MdPrivacyTip,
+  MdLogout,
 } from "react-icons/md";
 
 import { props, parameters } from "../props";
@@ -105,6 +108,40 @@ Default.args = {
       label: "Actualizar datos",
       path: "/update-data-assisted",
       icon: <MdAndroid />,
+    },
+  ],
+  userMenu: [
+    {
+      id: "section1",
+      title: "Profile",
+      links: [
+        {
+          id: "link1",
+          title: "Account Settings",
+          path: "/account",
+          iconBefore: <MdSettings />,
+        },
+        {
+          id: "link2",
+          title: "Privacy Settings",
+          path: "/privacy",
+          iconBefore: <MdPrivacyTip />,
+        },
+      ],
+      divider: true,
+    },
+    {
+      id: "section2",
+      title: "Actions",
+      actions: [
+        {
+          id: "action1",
+          title: "Logout",
+          action: () => console.log("Logout"),
+          iconBefore: <MdLogout />,
+        },
+      ],
+      divider: true,
     },
   ],
   showLinks: false,
