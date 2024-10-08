@@ -13,7 +13,6 @@ const StyledHeader = styled.header`
     0px 1px 2px 0px
       ${({ theme }) =>
         theme?.palette?.neutral?.N20 || inube.palette.neutral.N20};
-
   & > div > div > div {
     position: unset;
     display: flex;
@@ -35,6 +34,12 @@ const StyledHeader = styled.header`
     border-left: 1px solid
       ${({ theme }) =>
         theme?.palette?.neutral?.N40 || inube.palette.neutral.N40};
+  }
+
+  & > div > div > div > div:nth-child(2) {
+    position: absolute;
+    top: 4.6rem;
+    right: 1rem;
   }
 `;
 
