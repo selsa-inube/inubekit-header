@@ -1,3 +1,15 @@
+# v3.0.0 (Mon Oct 28 2024)
+
+#### 💥 Breaking Change
+
+- feat: extend navigation, user, and links props and update user dep [#61](https://github.com/selsa-inube/inubekit-header/pull/61) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v2.47.0 (Thu Oct 10 2024)
 
 #### 🚀 Enhancement
