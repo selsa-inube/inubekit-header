@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import { tokens } from "./Tokens/tokens";
 
 const StyledHeader = styled.header`
+  box-sizing: border-box;
+  border-bottom: 1px solid
+    ${({ theme }) => theme?.palette?.neutral?.N40 || inube.palette.neutral.N40};
+  // height: 54px;
   background-color: ${({ theme }) =>
     theme?.header?.background?.color || tokens.background.color};
   box-shadow:
@@ -13,40 +17,25 @@ const StyledHeader = styled.header`
     0px 1px 2px 0px
       ${({ theme }) =>
         theme?.palette?.neutral?.N20 || inube.palette.neutral.N20};
-  & > div > div > div {
-    position: unset;
-    display: flex;
-    align-items: center;
-  }
-  & li {
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-  }
-  & > div > div:first-child {
-    padding-left: 12px;
-  }
-  & > div > div > img {
-    height: 33.57px;
-  }
-  & > div > div > div:last-child {
-    padding: 8px 16px;
-    border-left: 1px solid
-      ${({ theme }) =>
-        theme?.palette?.neutral?.N40 || inube.palette.neutral.N40};
-  }
+`;
 
-  & > div > div > div > div:nth-child(2) {
-    position: absolute;
-    top: 4.6rem;
-    right: 1rem;
-  }
+const StyledFullscreenNav = styled.div`
+  position: relative;
+  height: 24px;
+  width: 24px;
+  display: ${({ $display }) => ($display ? "block" : "none")};
 `;
 
 const StyledLink = styled(Link)`
-  display: flex;
   text-decoration: none;
-  padding: 16px;
 `;
 
-export { StyledHeader, StyledLink };
+const StyledUser = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid
+    ${({ theme }) => theme?.palette?.neutral?.N40 || inube.palette.neutral.N40};
+`;
+
+export { StyledHeader, StyledFullscreenNav, StyledLink, StyledUser };
